@@ -3,11 +3,12 @@ def valid_move? (board, index)
   move = nil
   if index > 8
     move = false
-  elsif
-    return false
+  elsif position_taken?
+    move = false
   else
-    return true
+    move = true
   end
+  move
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
